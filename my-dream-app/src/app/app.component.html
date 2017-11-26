@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<!--  <div class="container">       
+  <div class="row">
+    <div class="col-xs-12">
+      <input type=text [(ngModel)]="name">
+      <p>{{name}}</p>
+      <hr>
+      <!--<app-servers></app-servers>-->
+      <!-- <div app-servers></div> -->
+     <!--  <div class='app-servers'></div>
+
+    </div>
+  </div>
+</div> --> 
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-component1 (showText)="onShowText($event)"></app-component1>
+    </div>
+    <div class="col-md-6">
+      <app-component2 
+      [c2name]="cmp2Element"></app-component2>
+    </div>
+  </div>
+</div>
+ 
