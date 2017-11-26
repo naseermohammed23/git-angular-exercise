@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'bow', component: BowComponent},
+  {path: 'bow/:id/:name', component: BowComponent},
   {path: 'bom', component: BomComponent},
   {path: 'accomplish', component: AccomplishComponent}
 ];
