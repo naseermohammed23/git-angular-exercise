@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-bow',
@@ -18,5 +18,12 @@ export class BowComponent implements OnInit {
       mntncId: this.route.snapshot.params['id'],
       mntncName: this.route.snapshot.params['name']
     };
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.bow.mntncId = params['id'];
+          this.bow.mntncName = params['name'];
+        }
+      );
   }
 }
