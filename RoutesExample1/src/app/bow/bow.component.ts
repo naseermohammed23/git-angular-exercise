@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-bow',
   templateUrl: './bow.component.html',
   styleUrls: ['./bow.component.css']
 })
-export class BowComponent implements OnInit {
+export class BowComponent implements OnInit, OnDestroy {
   bow: {mntncId: number, mntncName: string};
+
+  paramsSubscription: Subscription;
 
   constructor(private route: ActivatedRoute) {
 
@@ -25,5 +29,9 @@ export class BowComponent implements OnInit {
           this.bow.mntncName = params['name'];
         }
       );
+  }
+
+  ngOnDestroy() {
+    this.paramsSubscription.unsubscribe();
   }
 }
