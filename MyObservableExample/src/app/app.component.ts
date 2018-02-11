@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
-import { setTimeout } from 'timers';
+// tslint:disable-next-line:import-blacklist
+import 'rxjs/Rx';
 
 @Component({
   selector: 'app-root',
@@ -11,18 +12,26 @@ import { setTimeout } from 'timers';
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  number = 1;
 
   ngOnInit() {
+
+    const myNumber = Observable.interval(1000);
+     myNumber.subscribe(
+       (number: number) => {
+        console.log(number);
+      });
+
     const myObservable = Observable.create((observer: Observer<string>) => {
       setTimeout(() => {
         observer.next('first package');
       }, 2000);
       setTimeout(() => {
         observer.next('Second package');
-      }, 2000);
+      }, 4000);
       setTimeout(() => {
         observer.next('this does not work');
-      }, 2000);
+      }, 6000);
 
     });
 
