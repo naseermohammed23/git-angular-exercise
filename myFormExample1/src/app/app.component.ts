@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { ElementRef } from '@angular/core/src/linker/element_ref';
-import { NgForm } from '@angular/forms/src/directives/ng_form';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +7,49 @@ import { NgForm } from '@angular/forms/src/directives/ng_form';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  @ViewChild('f') signupForm: NgForm;
+  defaultQuestion = 'teacher';
+  answer = '';
+  genders = ['male', 'female'];
+  user = {
+    username: '',
+    email: '',
+    secretQuestion: '',
+    answer: '',
+    gender: ''
+  };
+  submitted = false;
 
-  onSubmit(form: NgForm) {  // ElementRef
-    // console.log('submitted');
-    console.log(form);
-    console.log(form.value.fname);
-    console.log(form.value.lname);
-    console.log(form.value.address);
+  suggestUserName() {
+    const suggestedName = 'Superuser';
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: ''
+    //   },
+    //   secret: 'pet',
+    //   questionAnswer: '',
+    //   gender: 'male'
+    // });
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
+  }
+
+  // onSubmit(form: NgForm) {
+  //   console.log(form);
+  // }
+
+  onSubmit() {
+    this.submitted = true;
+    this.user.username = this.signupForm.value.userData.username;
+    this.user.email = this.signupForm.value.userData.email;
+    this.user.secretQuestion = this.signupForm.value.secret;
+    this.user.answer = this.signupForm.value.questionAnswer;
+    this.user.gender = this.signupForm.value.gender;
+
+    this.signupForm.reset();
   }
 }
