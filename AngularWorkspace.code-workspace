@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "MyObservableExample"
+		},
+		{
+			"path": "MyObservableDestroy"
+		},
+		{
+			"path": "myFormExample1"
+		},
+		{
+			"path": "forms-reactive-start"
+		}
+	],
+	"settings": {}
+}

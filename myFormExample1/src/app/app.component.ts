@@ -38,11 +38,8 @@ export class AppComponent {
     });
   }
 
-  // onSubmit(form: NgForm) {
-  //   console.log(form);
-  // }
-
-  onSubmit() {
+   onSubmit(signupForm: NgForm) {
+     console.log(this.signupForm);
     this.submitted = true;
     this.user.username = this.signupForm.value.userData.username;
     this.user.email = this.signupForm.value.userData.email;
