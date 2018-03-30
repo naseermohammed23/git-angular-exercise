@@ -11,6 +11,18 @@
 		},
 		{
 			"path": "forms-reactive-start"
+		},
+		{
+			"path": "myCWLSearchForm"
+		},
+		{
+			"path": "my-dream-app"
+		},
+		{
+			"path": "cmp-databinding"
+		},
+		{
+			"path": "MyfirstApp"
 		}
 	],
 	"settings": {}

@@ -1,0 +1,45 @@
+
+<!-- <tree-root [nodes]="nodes" [options]="options"></tree-root> -->
+<!-- 
+<h3>treeNodeFullTemplate</h3>
+    <tree-root id="tree2" [focused]="true" [nodes]="nodes2">
+      <ng-template #treeNodeFullTemplate let-node let-index="index" let-templates="templates">
+        <div class="tree-node">
+          <input type="checkbox" [checked]="node.isActive" (change)="node.toggleActivated(true)" />
+          <tree-node-expander [node]="node"></tree-node-expander>
+          <div
+            class="node-content-wrapper"
+            [class.node-content-wrapper-active]="node.isActive"
+            [class.node-content-wrapper-focused]="node.isFocused"
+            (click)="node.toggleActivated(true)">
+            <span [class]="node.data.className + 'Index'">{{ index }}</span>
+            <span [class]="node.data.className" [class.title]="true">{{ node.data.title }}</span>
+          </div>
+          <tree-node-children [node]="node" [templates]="templates"></tree-node-children>
+        </div>
+      </ng-template>
+    </tree-root> -->
+
+    <h3>Access privileges for user..</h3>
+    <h5>ID : 842018</h5>
+    <h5>Name : Naseer Mohammed</h5>
+    <tree-root #tree
+      id="tree1"
+      [nodes]="nodes"
+      [options]="options"
+      [focused]="true">
+    </tree-root>
+    <!-- <h3>The tree is using flexbox.<br>
+    Switch expander and checkbox with CSS 'order' attribute:</h3>
+    <tree-root
+      class="reverse"
+      id="tree2"
+      [nodes]="nodes"
+      [options]="options">
+    </tree-root>
+    <h3>Disable tri-state checkboxes</h3>
+    <tree-root
+      id="tree3"
+      [nodes]="nodes"
+      [options]="optionsDisabled">
+    </tree-root> -->
