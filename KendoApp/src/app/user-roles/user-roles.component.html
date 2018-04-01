@@ -1,3 +1,22 @@
-<p>
-  user-roles works!
-</p>
+
+<button kendoButton (click)="saveData()" [primary]="true">Save</button>
+
+<div class="example-config">
+  Checked keys: {{this.checkedKeys.join(",")}}
+</div>
+
+<kendo-treeview #tree1
+            [nodes]="data"
+            [children]="children"
+            [hasChildren]="hasChildren"
+            textField="text"
+
+            [kendoTreeViewCheckable]="checkableSettings"
+            [checkBy]="'text'"
+            [(checkedKeys)]="checkedKeys"
+            (checkedChange)="handleChecking($event)"
+            kendoTreeViewExpandable
+            [(expandedKeys)]="expandedKeys">
+        </kendo-treeview>
+
+        <!-- [isChecked]="isChecked" -->

@@ -1,55 +1,63 @@
-export const masterData = [ {
+export const masterData = [{
   text: 'All',
   items: [
-{
-      text: 'Roles', checked: false,
+    {
+      text: 'Roles',
       items: [
-        { text: 'Admin_Role', checked: false},
-        { text: 'Planner_Role', checked: false},
-        { text: 'Guest_Role', checked: false},
-        { text: 'SCPT_Role', checked: false},
-        { text: 'DECS_Role', checked: false},
+        { text: 'Admin_Role' },
+        { text: 'Planner_Role' },
+        { text: 'Guest_Role' },
+        { text: 'SCPT_Role' },
+        { text: 'DECS_Role' },
       ]
     },
     {
-      text: 'CWLV', checked: false,
+      text: 'CWLV',
       items: [
-        { text: 'Tabs', checked: false,
+        {
+          text: 'Tabs',
           items: [
-            {text: 'CWLV-Tab', checked: false,
+            {
+              text: 'CWLV-Tab',
               items: [
-                  { text: 'Filter-Panel', checked: false,
-                    items: [
-                      { text: 'Station dropdown', checked: false},
-                      { text: 'Aircraft', checked: false},
-                      { text: 'Fleet', checked: false},
-                      { text:  'Ron-Rod dropdown', checked: false},
-                      { text: 'MntncId', checked: false},
-                      { text: 'MntncType', checked: false},
-                      { text: 'Check only', checked: false},
-                      { text: 'Search Button', checked: false},
-                    ]
-                  },
-                  { text: 'CWLV-Grid',
-                    items: [
-                      {text: 'Export Button'},
-                      {text: 'Print Button'},
-                    ]
-                  }
+                {
+                  text: 'Filter-Panel',
+                  items: [
+                    { text: 'Station dropdown' },
+                    { text: 'Aircraft' },
+                    { text: 'Fleet' },
+                    { text: 'Ron-Rod dropdown' },
+                    { text: 'MntncId' },
+                    { text: 'MntncType' },
+                    { text: 'Check only' },
+                    { text: 'Search Button' },
+                  ]
+                },
+                {
+                  text: 'CWLV-Grid',
+                  items: [
+                    { text: 'Export Button' },
+                    { text: 'Print Button' },
+                  ]
+                }
               ]
             },
-            { text: 'ManHour-Tab',
+            {
+              text: 'ManHour-Tab',
               items: [
-                { text: 'Refresh Button'},
-                { text: 'Manhour Grid'}
-              ]},
-            {text: 'XUtil-Tab', expanded: true,
+                { text: 'Refresh Button' },
+                { text: 'Manhour Grid' }
+              ]
+            },
+            {
+              text: 'XUtil-Tab', expanded: true,
               items: [
-                { text: 'XUtil Grid'},
-                { text: 'XUtil Grid Add'},
-                { text: 'XUtil Grid Edit'},
-                { text: 'XUtil Grid Delete'},
-              ]}
+                { text: 'XUtil Grid' },
+                { text: 'XUtil Grid Add' },
+                { text: 'XUtil Grid Edit' },
+                { text: 'XUtil Grid Delete' },
+              ]
+            }
           ]
         }
       ]
@@ -57,8 +65,8 @@ export const masterData = [ {
     {
       text: 'CWLV Base',
       items: [
-        { text: 'Tab1'},
-        { text: 'Tab2'}
+        { text: 'Tab1' },
+        { text: 'Tab2' }
       ]
     }
   ]
