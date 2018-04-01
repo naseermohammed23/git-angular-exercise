@@ -1,0 +1,15 @@
+
+<button kendoButton (click)="displayData()" [primary]="true">Expand All</button>
+
+<kendo-treeview #tree1
+            [nodes]="data"
+            [children]="children"
+            [hasChildren]="hasChildren"
+            textField="text"
+
+            [kendoTreeViewCheckable]="checkableSettings"
+            kendoTreeViewExpandable
+            [(expandedKeys)]="expandedKeys">
+        </kendo-treeview>
+
+        <!-- [isChecked]="isChecked" -->
