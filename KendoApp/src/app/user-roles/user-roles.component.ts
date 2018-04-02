@@ -31,6 +31,10 @@ public handleChecking(itemLookup: TreeItemLookup): void {
     this.checkedKeys.concat([itemLookup.item.dataItem.text]);
     // console.log(this.checkedKeys.join(','));
 }
+saveData(): void {
+  this.accessRolesSvc.savedCheckedKeys = this.checkedKeys;
+  console.log(this.accessRolesSvc.savedCheckedKeys);
+}
 
 public get checkableSettings(): CheckableSettings {
   return {

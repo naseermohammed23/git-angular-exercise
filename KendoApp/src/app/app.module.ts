@@ -10,6 +10,14 @@ import { UserRolesComponent } from './user-roles/user-roles.component';
 import { MasterRolesComponent } from './master-roles/master-roles.component';
 import { AccessDemoComponent } from './access-demo/access-demo.component';
 import { AccessRolesService } from './access-roles.service';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component: MasterRolesComponent},
+  {path: 'user', component: UserRolesComponent},
+  {path: 'demo', component: AccessDemoComponent}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +27,7 @@ import { AccessRolesService } from './access-roles.service';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     ButtonsModule,
     BrowserAnimationsModule, TreeViewModule,
     FormsModule
