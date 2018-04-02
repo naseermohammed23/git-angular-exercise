@@ -1,7 +1,8 @@
 
        
 <h2>{{masterTitle}}</h2>
-
+<button class="btn btn-danger" (click)="add('New_Role')">Add NewRole</button>
+<button class="btn btn-danger" (click)="save()">Save Master</button>
 <kendo-treeview #tree1
             [nodes]="data"
             [children]="children"

@@ -33,8 +33,17 @@ export class MasterRolesComponent implements OnInit {
   public children = (dataItem: any): any[] => of(dataItem.items);
   public hasChildren = (dataItem: any): boolean => !!dataItem.items;
 
+  public add(newItem) {
+    this.data[0].items.push({text: newItem});
+}
+
   constructor(private accessRolesSvc: AccessRolesService) { }
 
   ngOnInit() {
+    // this.tree.expandedKeys();
+  }
+
+  save() {
+    this.accessRolesSvc.masterData = this.data;
   }
 }
