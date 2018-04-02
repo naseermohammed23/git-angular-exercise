@@ -1,8 +1,10 @@
 
-<button kendoButton (click)="saveData()" [primary]="true">Save</button>
+<h2>{{userTitle}}</h2>
 
 <div class="example-config">
-  Checked keys: {{this.checkedKeys.join(",")}}
+  <p>User ID: 842018</p>
+  <p>User Name: Naseer</p>
+  <p>Checked keys: {{this.checkedKeys.join(",")}}</p>
 </div>
 
 <kendo-treeview #tree1
@@ -10,6 +12,7 @@
             [children]="children"
             [hasChildren]="hasChildren"
             textField="text"
+            
 
             [kendoTreeViewCheckable]="checkableSettings"
             [checkBy]="'text'"
@@ -20,3 +23,4 @@
         </kendo-treeview>
 
         <!-- [isChecked]="isChecked" -->
+        <button kendoButton (click)="saveData()" [primary]="true">Save</button>

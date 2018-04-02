@@ -8,11 +8,14 @@ import { FormsModule } from '@angular/forms';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { UserRolesComponent } from './user-roles/user-roles.component';
 import { MasterRolesComponent } from './master-roles/master-roles.component';
+import { AccessDemoComponent } from './access-demo/access-demo.component';
+import { AccessRolesService } from './access-roles.service';
 @NgModule({
   declarations: [
     AppComponent,
     UserRolesComponent,
-    MasterRolesComponent
+    MasterRolesComponent,
+    AccessDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import { MasterRolesComponent } from './master-roles/master-roles.component';
     BrowserAnimationsModule, TreeViewModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AccessRolesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
